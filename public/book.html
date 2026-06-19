@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Book Appointment - Sis2Sis</title>
+<style>
+body { font-family: Georgia, serif; max-width: 600px; margin: 60px auto; padding: 20px; color: #333; }
+h1 { color: #92400e; font-size: 2em; margin-bottom: 8px; }
+p { color: #666; margin-bottom: 30px; }
+label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; }
+input, select, textarea { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box; }
+textarea { height: 100px; }
+button { background: #b45309; color: white; padding: 12px 30px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; width: 100%; }
+button:hover { background: #92400e; }
+.back { display: inline-block; margin-bottom: 20px; color: #b45309; text-decoration: none; font-size: 14px; }
+.note { background: #fef3c7; border-left: 3px solid #b45309; padding: 10px 15px; margin-bottom: 20px; font-size: 14px; border-radius: 4px; }
+</style>
+</head>
+<body>
+<a href="/" class="back">← Back to Sis2Sis</a>
+<h1>Book an Appointment</h1>
+<p>Fill out the form below and we'll confirm your appointment within 24 hours.</p>
+<div class="note">📅 Available Sunday–Thursday. Closed Friday & Saturday.</div>
+<form name="booking" method="POST" data-netlify="true" action="/book-success.html">
+  <input type="hidden" name="form-name" value="booking" />
+  <label>Your Name *</label>
+  <input type="text" name="name" required />
+  <label>Email Address *</label>
+  <input type="email" name="email" required />
+  <label>Phone Number *</label>
+  <input type="tel" name="phone" required />
+  <label>Preferred Date *</label>
+  <input type="date" name="preferredDate" required />
+  <label>Preferred Time</label>
+  <select name="preferredTime">
+    <option>Morning (10am–12pm)</option>
+    <option>Afternoon (12pm–3pm)</option>
+    <option>Evening (3pm–6pm)</option>
+  </select>
+  <label>Event Type</label>
+  <select name="eventType">
+    <option>Wedding</option>
+    <option>Bar/Bat Mitzvah</option>
+    <option>Shabbos/Yom Tov</option>
+    <option>Other Simcha</option>
+  </select>
+  <label>Additional Notes</label>
+  <textarea name="message" placeholder="Dress size, style preferences, anything else we should know..."></textarea>
+  <button type="submit">Request Appointment</button>
+</form>
+</body>
+</html>
