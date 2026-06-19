@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Contact - Sis2Sis</title>
+<style>
+body { font-family: Georgia, serif; max-width: 600px; margin: 60px auto; padding: 20px; color: #333; }
+h1 { color: #92400e; font-size: 2em; margin-bottom: 8px; }
+p { color: #666; margin-bottom: 30px; }
+label { display: block; margin-bottom: 6px; font-weight: bold; font-size: 14px; }
+input, select, textarea { width: 100%; padding: 10px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; box-sizing: border-box; }
+textarea { height: 120px; }
+button { background: #b45309; color: white; padding: 12px 30px; border: none; border-radius: 6px; font-size: 16px; cursor: pointer; width: 100%; }
+button:hover { background: #92400e; }
+.back { display: inline-block; margin-bottom: 20px; color: #b45309; text-decoration: none; font-size: 14px; }
+</style>
+</head>
+<body>
+<a href="/" class="back">← Back to Sis2Sis</a>
+<h1>Contact Us</h1>
+<p>Have questions? We'd love to hear from you!</p>
+<form name="contact" method="POST" data-netlify="true" action="/contact-success.html">
+  <input type="hidden" name="form-name" value="contact" />
+  <label>Your Name *</label>
+  <input type="text" name="name" required />
+  <label>Email Address *</label>
+  <input type="email" name="email" required />
+  <label>Subject</label>
+  <select name="subject">
+    <option>General Inquiry</option>
+    <option>Booking Question</option>
+    <option>Donate a Gown</option>
+    <option>Other</option>
+  </select>
+  <label>Message *</label>
+  <textarea name="message" required></textarea>
+  <button type="submit">Send Message</button>
+</form>
+</body>
+</html>
